@@ -1,0 +1,44 @@
+<section class="header-section " id="first-section">
+    <div class="background-container d-flex align-items-center justify-content-center pb-3"[attr.dir]="language === 'ar' ? 'rtl' : 'ltr'" id="background">
+      <div class="overlay d-flex flex-column align-items-center justify-content-center {{ language === 'en' ? 'english' : 'arabic' }}">
+      
+       
+        <h2 class="text-center text-main fw-bold mb-3">{{ 'GHAYA_AWARDS.AWARD1.NAME' | translate }}</h2>
+
+        
+      </div>
+  </div>
+  </section> 
+
+  <!--short story-->
+  <div class="container-fluid bg-main py-5 " [attr.dir]="language === 'ar' ? 'rtl' : 'ltr'">
+
+  <div class="container py-3 mt-5">
+    <div id="ShortStory" class="container mx-auto ">
+        <!-- Award 1 Section --> 
+        <h3 class="text-center text-main fw-bold mb-3 h2">{{ 'GHAYA_AWARDS.AWARD1.EDITION' | translate }}</h3>
+
+        <div class="row d-flex align-items-center flex-column flex-md-row">
+            <!-- Image Column -->
+            <div class="col-12 col-md-3 d-flex flex-column justify-content-center align-items-center mb-3 mb-md-0">
+                <img src="./assets/Images/user.png" alt="" class="w-75">
+                <span class="mt-2">{{ 'GHAYA_AWARDS.AWARD1.PHOTO_NAME' | translate }}</span>
+            </div>
+            <!-- Content Column -->
+            <div class="col-12 col-md-9">
+                <div class="mb-5">
+                    <!-- More Content -->
+                    <p class="lead" [innerHTML]="'GHAYA_AWARDS.DETAILS.POINT1' | translate | newlineToBr"></p>
+                    <p class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT2' | translate | newlineToBr"></p>
+                    <p class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT3' | translate | newlineToBr"></p>
+                    <p class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT4' | translate | newlineToBr"></p>
+                    <p class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT5' | translate | newlineToBr"></p>
+                    <p class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT6' | translate | newlineToBr"></p>
+                    <p class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT7' | translate | newlineToBr"></p>
+                    <p class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT8' | translate | newlineToBr"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  </div>

@@ -1,0 +1,54 @@
+<div class="container-fluid bg-main "[attr.dir]="language === 'ar' ? 'rtl' : 'ltr'">
+  <div class="container  ">
+    
+    <h3 class="text-danger h2 text-center" [innerHTML]="'FOUNDERS' | translate | newlineToBr"></h3>
+    <div class="row py-3">
+      <!-- FOUNDER INFO Section (Morad Maher) -->
+      <div class="col-md-6 mb-4">
+        <div class="d-flex flex-column justify-content-start align-items-start rounded-3 p-5">
+          <h2 class="text-main mb-3" [innerHTML]="'FOUNDER_INFO.NAME' | translate | newlineToBr"></h2>
+          <h3 class="text-main h5 mb-4" [innerHTML]="'FOUNDER_INFO.TITLE' | translate | newlineToBr"></h3>
+          <p class="text-main mb-4" [innerHTML]="'FOUNDER_INFO.GHAYA_FOUNDATION' | translate | newlineToBr"></p>
+          <p class="text-main mb-4" [innerHTML]="'FOUNDER_INFO.BEYOND_VISION' | translate | newlineToBr"></p>
+          <button class="btn btn-primary mb-3" (click)="toggleFounderVisibility()">
+            {{ showMoreFounder ? ('READ_LESS' | translate) : ('READ_MORE' | translate) }}
+          </button>
+          <ul class="custom-list mb-0" [ngClass]="{'show': showMoreFounder}">
+            <li class="text-main mb-2 animate-fade-in" [innerHTML]="'FOUNDER_INFO.EDUCATION' | translate | newlineToBr"></li>
+            <li class="text-main mb-2 animate-fade-in" [innerHTML]="'FOUNDER_INFO.UNION_MEMBERSHIPS.WRITERS_UNION' | translate | newlineToBr"></li>
+            <li class="text-main mb-2 animate-fade-in" [innerHTML]="'FOUNDER_INFO.UNION_MEMBERSHIPS.PUBLISHERS_UNION' | translate | newlineToBr"></li>
+            <li class="text-main mb-2 animate-fade-in" [innerHTML]="'FOUNDER_INFO.UNION_MEMBERSHIPS.ENGINEERS_SYNDICATE' | translate | newlineToBr"></li>
+            <li class="text-main mb-2 animate-fade-in" [innerHTML]="'FOUNDER_INFO.UNION_MEMBERSHIPS.VETERANS_ASSOCIATION' | translate | newlineToBr"></li>
+            <li class="text-main mb-2 animate-fade-in" [innerHTML]="'FOUNDER_INFO.HONORS.HONORARY_DOCTORATE' | translate | newlineToBr"></li>
+            <li class="text-main mb-2 animate-fade-in" [innerHTML]="'FOUNDER_INFO.HONORS.PEACE_AMBASSADOR' | translate | newlineToBr"></li>
+            <li class="text-main mb-2 animate-fade-in" [innerHTML]="'FOUNDER_INFO.HONORS.MILITARY_MEDAL' | translate | newlineToBr"></li>
+            <li class="text-main mb-2 animate-fade-in" [innerHTML]="'FOUNDER_INFO.HONORS.GOLD_RESIDENCE' | translate | newlineToBr"></li>
+            <li class="text-main mb-2 animate-fade-in" [innerHTML]="'FOUNDER_INFO.STUDIES' | translate | newlineToBr"></li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- VICE CEO Section (Amal Rabie)-->
+      <div class="col-md-6 mb-4">
+        <div class="d-flex flex-column justify-content-start align-items-start rounded-3 p-5">
+          <h2 class="text-main mb-3" [innerHTML]="'VICE_CEO.NAME' | translate | newlineToBr"></h2>
+          <h3 class="text-main h5 mb-4" [innerHTML]="'VICE_CEO.TITLE' | translate | newlineToBr"></h3>
+          <p class="text-main mb-4" [innerHTML]="'VICE_CEO.BIO' | translate | newlineToBr"></p>
+          <button class="btn btn-primary mb-3" (click)="toggleViceCEOVVisibility()">
+            {{ showMoreViceCEO ? ('READ_LESS' | translate) : ('READ_MORE' | translate) }}
+          </button>
+          <ul class="custom-list mb-0" [ngClass]="{'show': showMoreViceCEO}">
+            <li class="text-main mb-2 animate-fade-in" [innerHTML]="'VICE_CEO.EDUCATION' | translate | newlineToBr"></li>
+            <li class="text-main mb-2 animate-fade-in" [innerHTML]="'VICE_CEO.POSTGRADUATE_STUDIES' | translate | newlineToBr"></li>
+            <li class="text-main mb-2 animate-fade-in" [innerHTML]="'VICE_CEO.DOCTORATE' | translate | newlineToBr"></li>
+          </ul>
+        </div>
+      </div>
+
+      <app-boardmembers></app-boardmembers>
+    </div>
+  </div>
+</div>
+
+
+ 

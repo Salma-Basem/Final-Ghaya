@@ -1,0 +1,28 @@
+.carousel-container {
+    width: 100%; /* Ensure the carousel takes full width */
+    overflow: hidden; /* Prevent overflow issues */
+  }
+  
+  .carousel-slide-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .object-fit-cover {
+    object-fit: cover;
+    width: 100%; /* Ensure image scales correctly */
+    height: auto; /* Maintain aspect ratio */
+  }
+  [dir='rtl'] .owl-carousel-o {
+    direction: rtl; /* Ensure RTL direction is set for the carousel */
+  }
+  
+  [dir='rtl'] .owl-carousel-o .owl-item {
+    display: flex; /* Ensure items are displayed properly */
+  }
+  

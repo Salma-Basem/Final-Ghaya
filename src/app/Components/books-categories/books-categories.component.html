@@ -1,0 +1,26 @@
+<div class="container mx-auto mt-5 text-center mb-5" [attr.dir]="language === 'ar' ? 'rtl' : 'ltr'">
+    <!-- Title with Translation -->
+     
+    <h2 [innerHTML]="'BOOKS.BOOK_CATEGORIES' | translate | newlineToBr" class="mb-5 pb-3"></h2>
+  
+    <!-- Carousel -->
+    <owl-carousel-o [options]="customOptions">
+      <ng-container *ngFor="let slide of allCategories">
+        <ng-template carouselSlide>
+          <div class="carousel-slide-content">
+            <!-- Category Image with Navigation -->
+            <a [routerLink]="['/books', slide.categoryId]">
+              <img [src]="slide.image" class="object-fit-cover">
+            </a>
+    
+            <!-- Category Name with Translation -->
+            <p class="text-center mt-4" *ngIf="slide.nameKey">
+              {{ (slide.nameKey | translate) }}
+            </p>
+          </div>
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+  </div>
+  
+  

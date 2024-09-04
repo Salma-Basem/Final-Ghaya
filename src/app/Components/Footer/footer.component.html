@@ -1,0 +1,76 @@
+<!-- Footer -->
+<div class="container-fluid bg border-top " [dir]="language === 'ar' ? 'rtl' : 'ltr'">
+  <div class="container mt-3  ">
+    <div class="row  ">
+      <!-- Helpful Links Section -->
+      <div class="col-md-4 d-flex flex-column justify-content-start align-items-center">
+        <h3 class="text-color fw-bold h5 ">{{ language === 'ar' ? 'روابط قد تفيدك' : 'Helpful Links' }}</h3>
+        <span><a routerLink="AboutUs/AboutGhaya" class="text-decoration-underline footer">{{ language === 'ar' ? 'من نحن' : 'About Us' }}</a></span>
+        <span><a routerLink="ContactUs" class="text-decoration-underline footer">{{ language === 'ar' ? 'اتصل بنا' : 'Contact Us' }}</a></span>
+        <span><a routerLink="Policy" class="text-decoration-underline footer">{{ language === 'ar' ? 'سياستنا' : 'Our Policy' }}</a></span>
+        <span><a routerLink="BoardMembers" class="text-decoration-underline footer">{{ language === 'ar' ? '  أعضاء مجلس الإدارة': ' Board Members' }}</a></span>
+        <span><a routerLink="GhayaApp" class="text-decoration-underline footer">{{ language === 'ar' ? 'تطبيق غايا الإلكتروني': ' Ghaya App' }}</a></span>
+
+      </div>
+
+      <!-- Social Media Section -->
+      <div class="col-md-4 d-flex flex-column justify-content-start align-items-center  social-links">
+        <h3 class="text-color fw-bold h5 social-text">
+            {{ language === 'ar' ? 'مواقع التواصل الاجتماعي' : 'Socials' }}
+        </h3>
+        <div class="flex-sm-row d-flex mt-sm-2 flex-md-column " >
+            <div class="cursor-pointer" (click)="goToFacebook()">
+                <i class="fab fa-facebook fa-fw mb-2 "></i><span class="social-text">{{ language === 'ar' ? ' فيس بوك' : 'Facebook' }} </span>
+            </div>
+            <div class="cursor-pointer" (click)="goToInstagram()">
+                <i class="fa-brands fa-instagram fa-fw mb-2"></i><span class="social-text">{{ language === 'ar' ? 'انستجرام': 'Instagram' }} </span>
+            </div>
+            <div class="cursor-pointer" (click)="goToSnapChat()">
+                <i class="fa-brands fa-snapchat fa-fw mb-2"></i><span class="social-text">{{ language === 'ar' ? 'سناب شات': 'Snapchat' }}  </span>
+            </div>
+            <div class="cursor-pointer" (click)="goToYoutube()">
+                <i class="fa-brands fa-youtube fa-fw mb-2"></i><span class="social-text">{{ language === 'ar' ? ' يوتيوب': 'Youtube' }} </span>
+            </div>
+            <div class="cursor-pointer" (click)="goToTikTok()">
+                <i class="fa-brands fa-tiktok fa-fw mb-2"></i><span class="social-text">{{ language === 'ar' ? ' تيك توك': 'TikTok' }} </span>
+            </div>
+            <div class="cursor-pointer" (click)="goToLinkedin()">
+                <i class="fa-brands fa-linkedin-in fa-fw mb-2"></i><span class="social-text">{{ language === 'ar' ? ' لينكدان': 'Linkedin' }} </span>
+            </div>
+        </div>
+      
+    </div>
+    
+    
+
+      <!-- Download Section -->
+      <div class="col-md-4  d-flex flex-column justify-content-start align-items-center">
+        <h3 class="text-color fw-bold h5 d-none d-md-block">
+            {{ language === 'ar' ? 'تحميل' : 'Download' }}
+        </h3>
+        <div class="d-flex flex-md-column flex-sm-row justify-content-center align-content-end  align-items-center">
+            <a (click)="goToGooglePlay()" class="me-2 mb-2 mb-md-0">
+                <img src="./assets/Images/GooglePlayIcon.png" alt="{{ language === 'ar' ? 'رابط جوجل بلاي' : 'Google Play Link' }}" class="cursor-pointer">
+            </a>
+            <a (click)="goToAppStore()">
+                <img src="./assets/Images/AppStoreIcon.png" alt="{{ language === 'ar' ? 'رابط آب ستور' : 'App Store Link' }}" class="cursor-pointer">
+            </a>
+        </div>
+    </div>
+      
+      
+    </div>
+  </div>
+  
+<div class="container-fluid bg pb-2">
+  <h6 class="text-center text-main  mt-2 mb-1">{{ language === 'ar' ? '© جميع الحقوق محفوظة لمؤسسة غايا للنشر ٢٠٢٤' : '© All rights reserved for Ghaya Publishing House 2024' }}</h6>
+  <button *ngIf="showScrollToTopButton" (click)="scrollToTop()" class="scroll-to-top-btn border rounded-1">
+    <i class="fa-solid fa-arrow-up "></i>
+  </button>
+</div>
+</div>
+
+
+
+
+

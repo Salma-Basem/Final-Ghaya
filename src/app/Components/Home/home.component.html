@@ -1,0 +1,21 @@
+<!--Home Component-->
+
+<section class="header-section " id="first-section">
+  <div class="background-container d-flex align-items-center justify-content-center pb-3"[attr.dir]="language === 'ar' ? 'rtl' : 'ltr'" id="background">
+    <div class="overlay d-flex flex-column align-items-center justify-content-center {{ language === 'en' ? 'english' : 'arabic' }}">
+    
+     
+        <h1 class="title-color ">{{ language === 'en' ? 'Ghaya Foundation for Creativity' : 'مؤسسة غايا للإبداع' }}</h1>
+        <h2 class="title-color mt-2 " [ngClass]="{'h3': language === 'en', 'h2': language === 'ar'}">{{ 'HOME_SECTION.HEADER' | translate }}</h2>
+      
+    </div>
+</div>
+</section> 
+<main>
+  
+   
+  <app-books-categories></app-books-categories>
+
+</main>
+
+

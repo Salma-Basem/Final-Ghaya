@@ -1,0 +1,35 @@
+<section class="header-section " id="first-section">
+    <div class="background-container d-flex align-items-center justify-content-center pb-3"[attr.dir]="language === 'ar' ? 'rtl' : 'ltr'" id="background">
+      <div class="overlay d-flex flex-column align-items-center justify-content-center {{ language === 'en' ? 'english' : 'arabic' }}">
+      
+       
+        <h2 class="text-center text-main fw-bold mb-3">{{ 'GHAYA_AWARDS.AWARD2.NAME' | translate }}</h2>
+
+        
+      </div>
+  </div>
+  </section> 
+  <div class="container-fluid bg-main py-5 " [attr.dir]="language === 'ar' ? 'rtl' : 'ltr'">
+    <div class="container py-3 mt-5">
+        <div  class="container mx-auto ">
+            <!-- Award 2 Section -->
+            <h3 class="text-center text-main fw-bold mb-3 h2">{{ 'GHAYA_AWARDS.AWARD2.EDITION' | translate }}</h3>
+
+            <div class="row d-flex align-items-center flex-column flex-md-row">
+                <!-- Image Column -->
+                <div class="col-12 col-md-3 d-flex flex-column justify-content-center align-items-center mb-3 mb-md-0">
+                    <img src="./assets/Images/camera.png" alt="Camera" class="w-75">
+                </div>
+                <!-- Content Column -->
+                <div class="col-12 col-md-9">
+                    <div class="mb-5">
+                        <!-- More Content -->
+                        <p class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD2.DETAILS.POINT1' | translate | newlineToBr"></p>
+                        <p class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD2.DETAILS.POINT2' | translate | newlineToBr"></p>
+                        <p class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD2.DETAILS.POINT3' | translate | newlineToBr"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

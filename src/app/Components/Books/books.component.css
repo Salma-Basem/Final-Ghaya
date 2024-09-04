@@ -1,0 +1,65 @@
+/* Container for RTL direction */
+.rtl {
+  direction: rtl;
+}
+
+.rtl .row {
+  display: flex;
+  flex-direction: row-reverse; /* Reverses the order of items in RTL languages */
+}
+
+/* Book Item Styling */
+.book-item {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* Image Styling */
+.book-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+}
+
+/* Title Styling */
+.book-title {
+  margin: 10px 0;
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effect for Image */
+.book-item:hover .book-image {
+  transform: scale(1.1);
+}
+
+/* Hover Effect for Title */
+.book-item:hover .book-title {
+  color: #007bff; /* Change color on hover */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .book-title {
+    font-size: 0.9rem;
+  }
+}
+
+/* Search Bar Styling */
+.search-bar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--text-color);
+}

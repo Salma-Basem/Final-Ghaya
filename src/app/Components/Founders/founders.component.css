@@ -1,0 +1,115 @@
+[dir="rtl"] h2, [dir="rtl"] p,[dir="rtl"] h3 {
+  text-align: right;
+  
+}
+
+[dir="ltr"] h2, [dir="ltr"] p,[dir="ltr"] h3 {
+  text-align: left;
+}
+
+/* General Styles */
+.bg-main {
+  background-color: #f8f9fa;
+}
+
+.card {
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.card-subtitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #6c757d;
+}
+
+.card-text {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* RTL and LTR Direction */
+[dir="rtl"] .card-title, 
+[dir="rtl"] .card-text {
+  text-align: right;
+}
+
+[dir="ltr"] .card-title, 
+[dir="ltr"] .card-text {
+  text-align: left;
+}
+
+
+
+/* List styling */
+.custom-list {
+list-style: none; /* Remove default bullets */
+padding-left: 0; /* Remove default padding */
+overflow: hidden; /* Hide any overflowed content */
+height: 0; /* Initially hide the list */
+transition: height 0.5s ease-in-out; /* Smooth transition for height */
+}
+
+.custom-list.show {
+height: fit-content; /* Show the list when toggled */
+}
+
+.custom-list li {
+position: relative;
+padding-left: 1.5rem; /* Adjust based on the bullet size */
+margin-bottom: 0.5rem; /* Reduce bottom margin for better spacing */
+opacity: 1; /* Ensure items are visible when shown */
+transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Smooth transition for opacity and transform */
+transform: translateY(0); /* Initial transform */
+}
+
+/* Dash styling for LTR and RTL */
+.custom-list li::before {
+content: '-'; /* Dash before each item */
+position: absolute;
+color: #f8f9fa; /* Dash color */
+font-size: 1rem; /* Dash size */
+left: 0; /* Position on the left for LTR */
+}
+
+/* RTL adjustments for the dash */
+[dir="rtl"] .custom-list li {
+padding-left: 0; /* Remove extra padding in RTL */
+padding-right: 1.5rem; /* Add padding for dash in RTL */
+}
+
+[dir="rtl"] .custom-list li::before {
+left: auto; /* Override left positioning in RTL */
+right: 0; /* Position dash on the right for RTL */
+}
+
+[dir="rtl"] .custom-list {
+direction: rtl; /* Ensure RTL support */
+}
+
+/* Animation for list items */
+.custom-list li.animate-fade-in {
+opacity: 0; /* Initially hidden */
+transform: translateY(-10px); /* Slide up effect */
+}
+
+.custom-list.show .animate-fade-in {
+opacity: 1; /* Fade in */
+transform: translateY(0); /* Slide down effect */
+}
+
+@keyframes fadeIn {
+from { opacity: 0; }
+to { opacity: 1; }
+}

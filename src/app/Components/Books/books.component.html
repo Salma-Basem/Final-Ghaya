@@ -1,0 +1,34 @@
+<div class="container mx-auto mt-5 text-center mb-5 pt-5" [attr.dir]="language === 'ar' ? 'rtl' : 'ltr'">
+ 
+  
+  <!-- Search Bar -->
+  <div class="search-bar mb-4 pt-3">
+    <input type="text" placeholder="{{ 'SEARCH' | translate }}" [(ngModel)]="searchTerm" (input)="filterBooks()">
+    
+  </div>
+  <h2 [innerHTML]="'BOOKS.BOOKS_LIST.BOOK_DETAILS.BOOKS' | translate | newlineToBr" class="text-main pt-5"></h2>
+
+  <!-- Book List -->
+  <div *ngIf="filteredBooks.length === 0" class="no-results">
+{{ language === 'ar' ? 'لا يوجد نتائج للبحث' : 'No Result was Found' }}
+  </div>
+  <div *ngIf="filteredBooks.length > 0" class="row justify-content-center gy-1">
+    <div class="col-md-4 col-12 mb-4" *ngFor="let book of filteredBooks">
+      <div class="book-item p-3">
+        <a [routerLink]="['/page-details', book.id]">
+          <img class="book-image mb-3 w-100" [src]="book.image" alt="{{book.name}}">
+          <p class="book-title">{{book.name}}</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  
+  
+  
+  
+  
+  
+  
